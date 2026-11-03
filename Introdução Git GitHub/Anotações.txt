@@ -60,3 +60,5 @@ git switch -c minha-feature       # cria uma branch para o trabalho
 git add .                         # prepara as alterações
 git commit -m "Adiciona login"    # salva no histórico
 git push -u origin minha-feature  # envia para o GitHub
+git push origin main #envia para o GITHUB
+
