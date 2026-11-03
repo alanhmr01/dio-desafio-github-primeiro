@@ -1,1 +1,62 @@
 Link Para download GIT - https://git-scm.com/
+
+Ordem de passos para o commit do GITHUB
+
+Configuração inicial
+Comando	O que faz
+git config --global user.name "Seu Nome"	Define seu nome
+git config --global user.email "seu@email.com"	Define seu e-mail
+git config --list	Mostra as configurações
+Criar ou copiar um repositório
+Comando	O que faz
+git init	Cria um repositório na pasta atual
+git clone <url>	Baixa um repositório remoto
+Dia a dia
+Comando	O que faz
+git status	Mostra o estado dos arquivos
+git add <arquivo>	Prepara um arquivo para o commit
+git add .	Prepara todas as alterações da pasta atual
+git commit -m "mensagem"	Salva as alterações preparadas no histórico
+git diff	Mostra as alterações ainda não preparadas
+git log --oneline	Mostra o histórico de forma resumida
+Branches
+Comando	O que faz
+git branch	Lista as branches locais
+git switch <nome>	Muda de branch
+git switch -c <nome>	Cria uma branch e muda para ela
+git merge <nome>	Junta a branch indicada à branch atual
+git branch -d <nome>	Apaga uma branch já integrada
+Repositório remoto (GitHub)
+Comando	O que faz
+git remote add origin <url>	Conecta o repositório local ao GitHub
+git remote -v	Mostra os remotos configurados
+git push -u origin main	Envia a branch main pela primeira vez e cria o vínculo com o remoto
+git push	Envia seus commits
+git pull	Baixa as alterações e as integra à branch atual
+git fetch	Baixa as alterações sem integrá-las
+Desfazer alterações
+Comando	O que faz
+git restore <arquivo>	Descarta alterações ainda não preparadas
+git restore --staged <arquivo>	Tira o arquivo da preparação e mantém as alterações
+git commit --amend	Corrige o último commit
+git revert <hash>	Cria um novo commit que desfaz um commit anterior
+git reset --hard <hash>	Volta a um commit anterior e apaga as alterações não salvas
+git stash	Guarda as alterações temporariamente
+git stash pop	Recupera as alterações guardadas
+GitHub CLI (gh)
+
+Precisa ser instalada separadamente.
+
+Comando	O que faz
+gh auth login	Faz login no GitHub
+gh repo clone <usuario/repo>	Clona um repositório
+gh repo create	Cria um repositório no GitHub
+gh pr create	Abre um pull request
+gh pr list	Lista os pull requests
+gh issue create	Abre uma issue
+Fluxo mais comum
+bash
+git switch -c minha-feature       # cria uma branch para o trabalho
+git add .                         # prepara as alterações
+git commit -m "Adiciona login"    # salva no histórico
+git push -u origin minha-feature  # envia para o GitHub
